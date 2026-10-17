@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8eee9">
+<title>Para Stiven 💗</title>
+<style>
+:root{--bg:#fbf2ed;--ink:#573d43;--pink:#e7aab7;--rose:#c86e85;--cream:#fffaf7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+.screen{min-height:100svh;display:none;align-items:center;justify-content:center;padding:28px 18px;position:relative;overflow:hidden}
+.screen.active{display:flex;animation:fade .7s ease both}
+.card{width:min(100%,520px);text-align:center;background:rgba(255,250,247,.78);border:1px solid #f0d9d9;border-radius:26px;padding:30px 22px;box-shadow:0 12px 40px #8d56621c}
+.kicker{font:12px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#a76e7c}
+h1{font-size:clamp(32px,8vw,52px);font-weight:normal;line-height:1.08;margin:14px 0}
+h2{font-size:clamp(27px,7vw,38px);font-weight:normal;margin:12px 0}
+p{font-size:17px;line-height:1.7}
+.heart{font-size:40px;color:var(--rose);display:inline-block;animation:beat 1.2s infinite}
+.progress{height:7px;background:#f0dce0;border-radius:9px;overflow:hidden;margin:24px 0 8px}
+.bar{height:100%;width:0;background:linear-gradient(90deg,#d88c9e,#a85c75);border-radius:9px}
+button{border:0;border-radius:999px;background:#b96d81;color:white;padding:14px 22px;font-size:15px;cursor:pointer;margin-top:14px;box-shadow:0 5px 15px #b96d812b}
+button:focus-visible{outline:3px solid #744452;outline-offset:3px}
+.small{font:12px Arial,sans-serif;color:#a17b81}
+.photo{width:min(100%,310px);aspect-ratio:4/5;object-fit:cover;border:10px solid white;box-shadow:0 8px 22px #58363a22;transform:rotate(-2deg);margin:18px auto 20px;display:block;background:#f4e1df}
+.photo-placeholder{display:flex;align-items:center;justify-content:center;color:#956c74;font:14px Arial,sans-serif;padding:24px}
+.bunting{font-size:24px;letter-spacing:7px}
+.letter{text-align:left;background:#fffdfb;padding:22px;border-radius:16px;border:1px dashed #e5b9c3}
+.letter p{font-size:16px}
+.float{position:absolute;opacity:.32;pointer-events:none;animation:drift 5s ease-in-out infinite}
+.float:nth-child(1){top:8%;left:8%;font-size:25px}.float:nth-child(2){right:8%;top:18%;font-size:20px;animation-delay:1s}.float:nth-child(3){left:10%;bottom:10%;font-size:24px;animation-delay:2s}.float:nth-child(4){right:10%;bottom:9%;font-size:28px;animation-delay:.5s}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.16)}}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-13px) rotate(7deg)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<section class="screen active" id="start">
+ <span class="float">♡</span><span class="float">✦</span><span class="float">♡</span><span class="float">✧</span>
+ <div class="card">
+  <div class="kicker">algo bonito te espera</div>
+  <div class="heart">♥</div>
+  <h1>Para Stiven</h1>
+  <p>Preparé algo con mucho amor para vos...</p>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <div class="small" id="loading">Cargando un poquito de amor…</div>
+  <button id="open" hidden>Empezar la sorpresa 💌</button>
+ </div>
+</section>
+<section class="screen" id="birthday">
+ <span class="float">♡</span><span class="float">✦</span><span class="float">♡</span><span class="float">✧</span>
+ <div class="card">
+  <div class="bunting">🎈 ✨ 🎂 ✨ 🎈</div>
+  <div class="kicker">hoy celebramos a alguien especial</div>
+  <h1>¡Feliz cumpleaños, Stiven!</h1>
+  <p>Hoy el mundo está un poquito más lindo porque es tu día. 💗</p>
+  <img id="photo" class="photo" alt="Una foto especial de Stiven" src="foto.jpg">
+  <p id="photoHelp" class="small">Reemplazá foto.jpg por una foto de ustedes para personalizar esta página.</p>
+  <p>Deseo que este nuevo año te regale alegría, sueños cumplidos y muchísimos motivos para sonreír.</p>
+  <button id="toLetter">Tengo algo más para vos 💗</button>
+ </div>
+</section>
+<section class="screen" id="letterScreen">
+ <span class="float">♡</span><span class="float">✦</span><span class="float">♡</span><span class="float">✧</span>
+ <div class="card">
+  <div class="heart">♡</div>
+  <h2>Una cartita para vos</h2>
+  <div class="letter">
+   <p>Mi amor, Stiven:</p>
+   <p>Feliz cumpleaños, mi persona favorita. Gracias por compartir conmigo tus sonrisas, tus abrazos y tantos momentos que guardo en el corazón.</p>
+   <p>Deseo que la vida te sorprenda con cosas hermosas, que nunca te falten razones para ser feliz y que puedas cumplir cada sueño que llevás dentro.</p>
+   <p>Me hace feliz acompañarte y crear recuerdos con vos. Ojalá este sea uno de muchos cumpleaños en los que pueda recordarte cuánto te quiero.</p>
+   <p>Con todo mi amor, hoy y siempre. 💗</p>
+  </div>
+  <button id="surprise">Abrí tu última sorpresa 🎁</button>
+ </div>
+</section>
+<section class="screen" id="final">
+ <span class="float">♡</span><span class="float">✦</span><span class="float">♡</span><span class="float">✧</span>
+ <div class="card">
+  <div class="heart">♥</div>
+  <h1>Vos sos mi lugar bonito</h1>
+  <p>Si pudiera pedir un deseo para hoy, sería que la vida te devuelva multiplicado todo lo lindo que das.</p>
+  <p>Feliz cumpleaños, Stiven. Te quiero muchísimo. 💞</p>
+  <button id="again">Volver a leer la sorpresa ↺</button>
+  <p class="small">Hecho con amor, especialmente para vos.</p>
+ </div>
+</section>
+<audio id="music" loop preload="none"><source src="musica.mp3" type="audio/mpeg"></audio>
+<script>
+const ids=['start','birthday','letterScreen','final'];
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'});}
+const bar=document.getElementById('bar'), openBtn=document.getElementById('open'), loading=document.getElementById('loading');
+let progress=0;
+const timer=setInterval(()=>{progress=Math.min(100,progress+5);bar.style.width=progress+'%';if(progress>=100){clearInterval(timer);loading.textContent='Tu sorpresa está lista 💗';openBtn.hidden=false}},120);
+openBtn.addEventListener('click',()=>{show('birthday');const a=document.getElementById('music');a.play().catch(()=>{});});
+document.getElementById('toLetter').addEventListener('click',()=>show('letterScreen'));
+document.getElementById('surprise').addEventListener('click',()=>show('final'));
+document.getElementById('again').addEventListener('click',()=>show('start'));
+document.getElementById('photo').addEventListener('error',e=>{const im=e.currentTarget;im.style.display='none';document.getElementById('photoHelp').style.display='block'});
+</script>
+</body>
+</html>
